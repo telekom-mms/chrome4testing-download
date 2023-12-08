@@ -1,11 +1,7 @@
 <mat-toolbar color="primary">
-  <span>My Application</span>
+<!--  <mat-icon aria-hidden="false" aria-label="Download Chrome 4 Testing" fontIcon="download"></mat-icon>-->
+  <button mat-button routerLink="/milestone" routerLinkActive="active-tab" ariaCurrentWhenActive="page"><mat-icon>download</mat-icon>Download milestones</button>
+  <button class="ml-1" mat-icon-button routerLink="/about" routerLinkActive="active-tab" ariaCurrentWhenActive="page"><mat-icon>info</mat-icon></button>
 </mat-toolbar>
-
-<nav>
-  <a routerLink="/milestone" routerLinkActive="active-tab" ariaCurrentWhenActive="page">Download milestones</a>
-  <a routerLink="/about" routerLinkActive="active-tab" ariaCurrentWhenActive="page">About</a>
-</nav>
-
 
 <router-outlet></router-outlet>
