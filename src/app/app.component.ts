@@ -6,16 +6,32 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
 import {MatTableModule} from "@angular/material/table";
 import {MatCardModule} from "@angular/material/card";
+import {HttpClientModule} from "@angular/common/http";
+import {MatSelectModule} from "@angular/material/select";
+import {MatFormFieldModule} from "@angular/material/form-field";
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterLink, RouterLinkActive, MatToolbarModule, MatButtonModule, MatIconModule, MatTableModule, MatCardModule],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+    selector: 'app-root',
+    standalone: true,
+    imports: [
+        CommonModule,
+        HttpClientModule,
+        MatButtonModule,
+        MatCardModule,
+        MatIconModule,
+        MatFormFieldModule,
+        MatSelectModule,
+        MatTableModule,
+        MatToolbarModule,
+        RouterOutlet,
+        RouterLink,
+        RouterLinkActive
+    ],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'google-download';
+    title = 'google-download';
 }
 
 
