@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import {MatTableModule} from "@angular/material/table";
+import {MatCardModule} from "@angular/material/card";
 
 @Component({
   selector: 'app-download-milestone',
   standalone: true,
   imports: [
-    MatTableModule
+    MatTableModule,
+    MatCardModule
   ],
   templateUrl: './download-milestone.component.html',
   styleUrl: './download-milestone.component.scss'
