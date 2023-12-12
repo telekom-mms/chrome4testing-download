@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
-import {Result} from "../models/models";
-import {Observable} from "rxjs";
+import {DownloadUrl, Milestone, Result} from "../models/models";
+import {map, Observable} from "rxjs";
 import {HttpClient} from "@angular/common/http";
 
 @Injectable({
@@ -17,9 +17,24 @@ export class DataService {
         return this.http.get<Result>(this.URL_MILESTONES);
     }
 
-    // getMilestones2(): Observable<Map<string, Milestone>> {
-    //     return this.http
-    //         .get<Map<string, Milestone>>(this.URL_MILESTONES)
-    //         .pipe(map(data => data.get('milestones'));
-    // }
+    getMilestones2(): Observable<Result> {
+        return this.http
+            .get(this.URL_MILESTONES)
+            .pipe(map((result: any) => {
+                    // Automatic transformation from JSON to 'Result' does not work -> no real Maps
+                    let milestones: Map<string, Milestone> = new Map(Object.entries(result.milestones));
+                    let newMilestones  = new Map<string, Milestone>();
+                    milestones.forEach((value, key) => {
+                        let newDownloads = new Map<string, DownloadUrl[]>(Object.entries(value.downloads));
+                        let newMilestone = value;
+                        newMilestone.downloads = newDownloads;
+                        newMilestones.set(key, newMilestone);
+                    })
+                    return {
+                        timestamp: result.timestamp,
+                        milestones: newMilestones
+                    };
+                })
+            );
+    }
 }

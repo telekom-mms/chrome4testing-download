@@ -8,15 +8,16 @@ export interface Milestone {
     milestone: string
     version: string
     revision: string
-    downloads: Map<App, Download>
+    // string: chrome, chromedriver, chrome-headless-shell
+    downloads: Map<string, DownloadUrl[]>
 }
 
-export interface Download {
+export interface DownloadUrl {
     platform: string;
     url: string;
 }
 
-enum App {
+export enum App {
     chrome,
     chromedriver,
     chromeHeadlessShell
