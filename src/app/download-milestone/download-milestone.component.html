@@ -16,9 +16,7 @@
     <span class="ml-1">Last update: {{ updated }}</span>
 
     <ng-container *ngIf="selectedMilestone; else nothing">
-<!--        <app-download-card *ngFor="let app of Array.from(selectedMilestone.downloads.keys())" [app]="app" [milestone]="selectedMilestone" ]>-->
-        <app-download-card *ngFor="let app of selectedApps" [app]="app" [milestone]="selectedMilestone">
-        </app-download-card>
+        <app-milestone [milestone]="selectedMilestone" class="mb-1"></app-milestone>
     </ng-container>
 
     <ng-template #nothing>

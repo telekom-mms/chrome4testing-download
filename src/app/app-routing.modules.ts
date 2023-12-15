@@ -1,6 +1,8 @@
-import { Routes } from '@angular/router';
+import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
 import {DownloadMilestoneComponent} from "./download-milestone/download-milestone.component";
 import {AboutComponent} from "./about/about.component";
+import {NgModule} from "@angular/core";
+import {AppComponent} from './app.component';
 
 export const routes: Routes = [
   {
@@ -17,3 +19,11 @@ export const routes: Routes = [
     component: AboutComponent
   }
 ];
+
+@NgModule({
+    imports: [RouterModule.forRoot(routes, {preloadingStrategy: PreloadAllModules})],
+    bootstrap: [AppComponent],
+    exports: [RouterModule]
+})
+export class AppRoutingModule {
+}

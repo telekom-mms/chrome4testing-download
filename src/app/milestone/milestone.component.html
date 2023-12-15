@@ -1,0 +1,6 @@
+<p>Chrome {{ milestone.milestone }}</p>
+
+<!--<app-download-card *ngFor="let app of Array.from(selectedMilestone.downloads.keys())" [app]="app" [milestone]="selectedMilestone" ]>-->
+<ng-container *ngIf="downloads.length > 0">
+    <app-download-card *ngFor="let download of downloads" [download]="download">Foo</app-download-card>
+</ng-container>
