@@ -1,11 +1,9 @@
-<p>Chrome {{ milestone.version }}</p>
-
 <ng-container *ngIf="appDownloads.length > 0">
 
     <table mat-table [dataSource]="appDownloads" class="mat-elevation-z8">
 
         <ng-container matColumnDef="app">
-            <th mat-header-cell *matHeaderCellDef> App</th>
+            <th mat-header-cell *matHeaderCellDef> Chrome {{ milestone.version }} <span *ngIf="milestone.channel"> - {{milestone.channel}}</span></th>
             <td mat-cell *matCellDef="let download"> {{ download.app }}</td>
         </ng-container>
 
@@ -13,7 +11,7 @@
             <th mat-header-cell *matHeaderCellDef> Downloads</th>
             <td mat-cell *matCellDef="let download">
                 <a mat-flat-button
-                   *ngFor="let platformDownload of download.downloads"
+                   *ngFor="let platformDownload of download!.downloads"
                    matTooltip="{{platformDownload.url}}"
                    [matTooltipShowDelay]="200"
                    href="{{platformDownload.url}}"

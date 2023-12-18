@@ -16,7 +16,7 @@
     <span class="ml-1">Last update: {{ updated }}</span>
 
     <ng-container *ngIf="selectedMilestone; else nothing">
-        <app-milestone [milestone]="selectedMilestone" class="mb-1"></app-milestone>
+        <app-milestone [milestone]="selectedMilestone"></app-milestone>
     </ng-container>
 
     <ng-template #nothing>

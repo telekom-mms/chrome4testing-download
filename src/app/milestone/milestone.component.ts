@@ -17,13 +17,13 @@ export class MilestoneComponent {
 
     ngOnChanges(changes: SimpleChanges) {
         if (changes['milestone']) {
-            this.milestone.downloads.forEach((k, v) => {
+            this.milestone?.downloads.forEach((k, v) => {
                 this.appDownloads.push({
                     app: v,
                     downloads: k
                 });
             });
-            console.log(this.milestone);
+            // console.log(this.milestone);
         }
     }
 

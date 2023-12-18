@@ -4,12 +4,18 @@ export interface Result {
     milestones: Map<string, Milestone>;
 }
 
+export interface ResultLatest {
+    timestamp: string;
+    channels: Map<string, Milestone>;
+}
+
 export interface Milestone {
-    milestone: string
-    version: string
-    revision: string
+    milestone: string;
+    version: string;
+    revision: string;
+    channel: string;
     // string: chrome, chromedriver, chrome-headless-shell
-    downloads: Map<string, DownloadUrl[]>
+    downloads: Map<string, DownloadUrl[]>;
 }
 
 export interface DownloadUrl {
