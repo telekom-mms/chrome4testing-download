@@ -13,11 +13,11 @@ export class DataService {
     constructor(private http: HttpClient) {
     }
 
-    getMilestones(): Observable<Result> {
-        return this.http.get<Result>(this.URL_MILESTONES);
-    }
+    // getMilestones(): Observable<Result> {
+    //     return this.http.get<Result>(this.URL_MILESTONES);
+    // }
 
-    getMilestones2(): Observable<Result> {
+    getMilestones(): Observable<Result> {
         return this.http
             .get(this.URL_MILESTONES)
             .pipe(map((result: any) => {

@@ -9,10 +9,10 @@ export const routes: Routes = [
     {
         path: '',
         pathMatch: 'full',
-        redirectTo: '/dl-latest'
+        redirectTo: '/latest'
     },
     {
-        path: 'dl-latest',
+        path: 'latest',
         component: DownloadLatestComponent
     },
     {
