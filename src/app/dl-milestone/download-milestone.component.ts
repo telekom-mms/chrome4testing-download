@@ -3,15 +3,13 @@ import {Milestone} from "../models/models";
 import {DataService} from "../services/data.service";
 
 @Component({
-    selector: 'app-download-milestone',
+    selector: 'app-dl-milestone',
     templateUrl: './download-milestone.component.html',
-    styleUrl: './download-milestone.component.scss',
+    styleUrl: './dl-milestone.component.scss',
     providers: [DataService]
 })
 
 export class DownloadMilestoneComponent implements OnInit {
-    // displayedColumns: string[] = ['release', 'version', 'win32', 'win64'];
-
     milestones!: Milestone[];
     selectedMilestone: Milestone | undefined;
 

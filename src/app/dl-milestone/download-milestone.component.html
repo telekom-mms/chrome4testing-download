@@ -1,0 +1,26 @@
+<section class="padding-1">
+
+    <h1>Download milestone versions</h1>
+
+<!--    <div>Download Chrome for testing versions via this URL: https://googlechromelabs.github.io/chrome-for-testing/latest-versions-per-milestone-with-downloads.json-->
+<!--    </div>-->
+
+    <mat-form-field>
+        <mat-label>Chrome version</mat-label>
+        <mat-select (selectionChange)="showDownloads($event.value)">
+            @for (milestone of milestones;track milestone) {
+                <mat-option [value]="milestone.version">{{ milestone.milestone }}</mat-option>
+            }
+        </mat-select>
+    </mat-form-field>
+    <span class="ml-1">Last update: {{ updated }}</span>
+
+    <ng-container *ngIf="selectedMilestone; else nothing">
+        <app-milestone [milestone]="selectedMilestone" class="mb-1"></app-milestone>
+    </ng-container>
+
+    <ng-template #nothing>
+        <h3>No version selected.</h3>
+    </ng-template>
+
+</section>

@@ -1,23 +1,28 @@
 import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
-import {DownloadMilestoneComponent} from "./download-milestone/download-milestone.component";
+import {DownloadMilestoneComponent} from "./dl-milestone/download-milestone.component";
 import {AboutComponent} from "./about/about.component";
 import {NgModule} from "@angular/core";
 import {AppComponent} from './app.component';
+import {DownloadLatestComponent} from "./dl-latest/download-latest.component";
 
 export const routes: Routes = [
-  {
-    path: '',
-    pathMatch: 'full',
-    redirectTo: '/milestone'
-  },
-  {
-    path: 'milestone',
-    component: DownloadMilestoneComponent
-  },
-  {
-    path: 'about',
-    component: AboutComponent
-  }
+    {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: '/dl-latest'
+    },
+    {
+        path: 'dl-latest',
+        component: DownloadLatestComponent
+    },
+    {
+        path: 'milestone',
+        component: DownloadMilestoneComponent
+    },
+    {
+        path: 'about',
+        component: AboutComponent
+    }
 ];
 
 @NgModule({

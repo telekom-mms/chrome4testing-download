@@ -13,17 +13,18 @@ import {MatTableModule} from "@angular/material/table";
 import {CommonModule} from "@angular/common";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {AppRoutingModule} from "./app-routing.modules";
-import {DownloadCardComponent} from "./download-card/download-card.component";
 import {MatListModule} from "@angular/material/list";
 import {MilestoneComponent} from "./milestone/milestone.component";
-import {DownloadMilestoneComponent} from "./download-milestone/download-milestone.component";
+import {DownloadMilestoneComponent} from "./dl-milestone/download-milestone.component";
+import {MatTooltipModule} from "@angular/material/tooltip";
+import {DownloadLatestComponent} from "./dl-latest/download-latest.component";
 
 @NgModule({
     declarations: [
         AppComponent,
         AboutComponent,
-        DownloadCardComponent,
         DownloadMilestoneComponent,
+        DownloadLatestComponent,
         MilestoneComponent
     ],
     imports: [
@@ -40,6 +41,7 @@ import {DownloadMilestoneComponent} from "./download-milestone/download-mileston
         MatSelectModule,
         MatTableModule,
         MatToolbarModule,
+        MatTooltipModule,
         //     RouterOutlet,
         //     RouterLink,
         //     RouterLinkActive
