@@ -24,7 +24,6 @@ export class DataService {
             .pipe(map((result: any) => {
                     // Automatic transformation from JSON to 'Result' does not work -> no real Maps
                     let milestones: Map<string, Milestone> = new Map(Object.entries(result.milestones));
-                    // console.log(milestones);
                     let newMilestones = new Map<string, Milestone>();
                     milestones.forEach((value, key) => {
                         let newDownloads = new Map<string, DownloadUrl[]>(Object.entries(value.downloads));
@@ -78,5 +77,13 @@ export class DataService {
                     // }
                 })
             );
+    }
+
+    getLatestDownloadUrl() {
+        return this.URL_LAST_KNOWN;
+    }
+
+    getMilestoneDownloadUrl() {
+        return  this.URL_MILESTONES;
     }
 }

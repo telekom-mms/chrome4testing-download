@@ -10,8 +10,8 @@ import {MilestoneComponent} from "../milestone/milestone.component";
 })
 export class DownloadLatestComponent {
 
-    stableMilestone!: Milestone;
-    betaMilestone!: Milestone;
+    protected stableMilestone!: Milestone;
+    protected betaMilestone!: Milestone;
 
     constructor(private dataService: DataService) {
     }
