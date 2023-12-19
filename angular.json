@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "google-download": {
+    "g4t-download": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,8 +17,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/google-download",
+            "outputPath": "dist",
             "index": "src/index.html",
+            "baseHref": "/chrome4testing-download/",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
@@ -63,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "google-download:build:production"
+              "buildTarget": "g4t-download:build:production"
             },
             "development": {
-              "buildTarget": "google-download:build:development"
+              "buildTarget": "g4t-download:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -74,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "google-download:build"
+            "buildTarget": "g4t-download:build"
           }
         },
         "test": {
