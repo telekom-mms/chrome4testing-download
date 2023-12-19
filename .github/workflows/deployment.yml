@@ -29,7 +29,7 @@ jobs:
       run: npm run build
 
     - run: pwd
-    - run: ls -la ./dist
+    - run: ls -la ./dist/browser
 
     - name: Deploy
       if: success()
