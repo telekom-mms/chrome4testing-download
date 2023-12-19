@@ -14,10 +14,6 @@ export class DataService {
     constructor(private http: HttpClient) {
     }
 
-    // getMilestones(): Observable<Result> {
-    //     return this.http.get<Result>(this.URL_MILESTONES);
-    // }
-
     getMilestones(): Observable<Result> {
         return this.http
             .get(this.URL_MILESTONES)
@@ -47,34 +43,16 @@ export class DataService {
 
                     let channels: Map<string, Milestone> = new Map(Object.entries(result.channels));
                     let newMilestones = new Map<string, Milestone>();
-                    // console.log(milestones);
                     channels.forEach((value, key) => {
-                        // console.log('value', value);
                         let newDownloads = new Map<string, DownloadUrl[]>(Object.entries(value.downloads));
                         let newMilestone = value;
-                        // let newMilestone:Milestone = {
-                        //     channel: value.channel,
-                        //     revision: value.revision,
-                        //     version: value.version,
-                        //     milestone: '',
-                        //     downloads: value.downloads
-                        // }
-                        // console.log('newMilestone', newMilestone);
                         newMilestone.downloads = newDownloads;
                         newMilestones.set(key, newMilestone);
                     });
-                    // console.log('new', newMilestones);
                     return {
                         timestamp: result.timestamp,
                         channels: newMilestones
                     };
-                    // console.log('Channel', channels.get('Stable'));
-                    // return {
-                    //     milestone: channels.get('Stable')!.milestone,
-                    //     revision: channels.get('Stable')!.revision,
-                    //     version: channels.get('Stable')!.version,
-                    //     downloads: channels.get('Stable')!.downloads
-                    // }
                 })
             );
     }
@@ -84,6 +62,6 @@ export class DataService {
     }
 
     getMilestoneDownloadUrl() {
-        return  this.URL_MILESTONES;
+        return this.URL_MILESTONES;
     }
 }
