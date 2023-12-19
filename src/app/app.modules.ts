@@ -12,12 +12,13 @@ import {MatSelectModule} from "@angular/material/select";
 import {MatTableModule} from "@angular/material/table";
 import {CommonModule} from "@angular/common";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {AppRoutingModule} from "./app-routing.modules";
+import {AppRoutingModule, routes} from "./app-routing.modules";
 import {MatListModule} from "@angular/material/list";
 import {MilestoneComponent} from "./milestone/milestone.component";
 import {DownloadMilestoneComponent} from "./dl-milestone/download-milestone.component";
 import {MatTooltipModule} from "@angular/material/tooltip";
 import {DownloadLatestComponent} from "./dl-latest/download-latest.component";
+import {provideRouter, withHashLocation} from "@angular/router";
 
 @NgModule({
     declarations: [
@@ -46,7 +47,9 @@ import {DownloadLatestComponent} from "./dl-latest/download-latest.component";
         //     RouterLink,
         //     RouterLinkActive
     ],
-    providers: [],
+    providers: [
+        provideRouter(routes, withHashLocation())
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {
