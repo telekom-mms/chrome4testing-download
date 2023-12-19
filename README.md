@@ -28,3 +28,6 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
+## Additional
+
+The Chrome for testing logo was published at https://github.com/GoogleChromeLabs/chrome-for-testing.
