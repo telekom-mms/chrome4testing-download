@@ -26,7 +26,7 @@ jobs:
       run: npm install
       
     - name: Build
-      run: npm run build
+      run: npm run build --baseHref="/chrome4testing-download/".
 
     - name: Deploy
       if: success()
