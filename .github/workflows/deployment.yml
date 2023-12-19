@@ -11,29 +11,29 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Checkout
       uses: actions/checkout@v3
-      
+
     - name: Use Node.js 18
       uses: actions/setup-node@v3
       with:
         node-version: '18'
         cache: 'npm'
-    
+
     - name: Install dependencies
       run: npm install
-      
+
     - name: Build
       run: npm run build --base-href=/chrome4testing-download/
 
-    - run: ls -la ./dist/google-download/browser
-    
+    - run: ls -la ./dist/g4t-download/browser
+
     - name: Deploy
       if: success()
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./dist/google-download/browser 
+        publish_dir: ./chrome4testing-download/dist/g4t-download/browser
         keep_files: true
