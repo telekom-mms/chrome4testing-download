@@ -2,9 +2,15 @@
 
 Simple download page for Chrome 4 testing based on JSON endpoints.
 
+<span style="font-size: 2rem;">👉</span> Please note, this is no official download page. It's just parse JSON endpoints to an easy-to-use download list. <span style="font-size: 2rem;">👈</span>
 
+If you need an official Chrome version, go to https://www.google.com/chrome/.
 
+## Further information
 
+* About Chrome for testing: https://developer.chrome.com/blog/chrome-for-testing/
+* Official repo about JSON endpoints: https://github.com/GoogleChromeLabs/chrome-for-testing
+* Simple dashboard: https://googlechromelabs.github.io/chrome-for-testing/
 
 ## Development server
 
