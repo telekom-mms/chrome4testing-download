@@ -1,6 +1,8 @@
 # Chrome4testing download
 
-Simple download page for Chrome 4 testing based on JSON endpoints.
+Simple download page for Chrome 4 testing based on JSON endpoints:
+
+**https://telekom-mms.github.io/chrome4testing-download/**
 
 <span style="font-size: 2rem;">👉</span> Please note, this is no official download page. It's just parse JSON endpoints to an easy-to-use download list. <span style="font-size: 2rem;">👈</span>
 
