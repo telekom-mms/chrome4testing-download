@@ -28,7 +28,7 @@ jobs:
     - name: Build
       run: npm run build --base-href=/chrome4testing-download/
 
-    - run: ls -la
+    - run: ls -la ./dist
     
     - name: Deploy
       if: success()
