@@ -28,6 +28,8 @@ jobs:
     - name: Build
       run: npm run build --base-href=/chrome4testing-download/
 
+    - run: ll
+    
     - name: Deploy
       if: success()
       uses: peaceiris/actions-gh-pages@v3
