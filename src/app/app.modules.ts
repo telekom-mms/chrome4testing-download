@@ -20,7 +20,9 @@ import {DownloadMilestoneComponent} from "./dl-milestone/download-milestone.comp
 import {MatTooltipModule} from "@angular/material/tooltip";
 import {DownloadLatestComponent} from "./dl-latest/download-latest.component";
 import {provideRouter, withHashLocation} from "@angular/router";
-import {GetChannelClassPipePipe} from "./pipes/channel-badge.pipe";
+import {GetChannelClassPipe} from "./pipes/channel-badge.pipe";
+import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
+import {GetPlatformIconPipe} from "./pipes/platform-icon.pipe";
 
 @NgModule({
     declarations: [
@@ -29,13 +31,15 @@ import {GetChannelClassPipePipe} from "./pipes/channel-badge.pipe";
         DownloadMilestoneComponent,
         DownloadLatestComponent,
         MilestoneComponent,
-        GetChannelClassPipePipe
+        GetChannelClassPipe,
+        GetPlatformIconPipe
     ],
     imports: [
         AppRoutingModule,
         BrowserAnimationsModule,
         BrowserModule,
         CommonModule,
+        FontAwesomeModule,
         HttpClientModule,
         MatBadgeModule,
         MatButtonModule,
