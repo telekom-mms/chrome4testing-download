@@ -1,0 +1,28 @@
+/**
+Thanks to https://stackoverflow.com/a/53321457
+ */
+
+table {
+    min-width: 850px;
+}
+
+//.column-default {
+//    white-space: unset !important;
+//    overflow-wrap: break-word;
+//    word-wrap: break-word;
+//    word-break: break-word;
+//    -ms-hyphens: auto;
+//    -moz-hyphens: auto;
+//    -webkit-hyphens: auto;
+//    hyphens: auto;
+//}
+
+.mat-column-app {
+    //@extend .column-default;
+    min-width: 250px;
+}
+
+.mat-column-downloads {
+    //@extend .column-default;
+    min-width: 600px;
+}
