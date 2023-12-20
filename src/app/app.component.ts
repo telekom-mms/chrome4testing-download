@@ -2,9 +2,10 @@ import {Component} from '@angular/core';
 import {IconOptions, MatIconRegistry} from "@angular/material/icon";
 import {DomSanitizer} from "@angular/platform-browser";
 import {FaIconLibrary} from '@fortawesome/angular-fontawesome';
-import {fas} from '@fortawesome/free-solid-svg-icons';
-import {far} from '@fortawesome/free-regular-svg-icons';
-import {fab} from '@fortawesome/free-brands-svg-icons'
+// import {fas} from '@fortawesome/free-solid-svg-icons';
+// import {far} from '@fortawesome/free-regular-svg-icons';
+// import {fab} from '@fortawesome/free-brands-svg-icons'
+import {faApple, faLinux, faMicrosoft} from '@fortawesome/free-brands-svg-icons'
 
 @Component({
     selector: 'app-root',
@@ -26,7 +27,9 @@ export class AppComponent {
             options
         );
         // Adding all icon packs from Font awesome
-        this.faLibrary.addIconPacks(fas, far, fab);
+        // Update: Added all icons exeeds maximum bundle budget
+        // this.faLibrary.addIconPacks(fas, far, fab);
+        this.faLibrary.addIcons(faLinux, faApple, faMicrosoft)
     }
 
 }
