@@ -17,7 +17,7 @@ export class AppComponent {
         const options: IconOptions = {viewBox: '0 0 128 128'};
         this.matIconRegistry.addSvgIcon(
             'chrome4test',
-            this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/logo.svg'),
+            this.domSanitizer.bypassSecurityTrustResourceUrl('assets/logo.svg'),
             options
         );
     }
