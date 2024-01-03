@@ -31,3 +31,26 @@ body {
 .h1-icon {
     transform: scale(2);
 }
+
+.badge {
+    padding: 3px 8px;
+    margin: 2px;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 0.815rem;
+}
+
+.badge-ok {
+    @extend .badge;
+    background-color: darkgreen;
+}
+
+.badge-warn {
+    @extend .badge;
+    background-color: orange;
+}
+
+.badge-alert {
+    @extend .badge;
+    background-color: darkred;
+}

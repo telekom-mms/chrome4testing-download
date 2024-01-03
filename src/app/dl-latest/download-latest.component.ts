@@ -12,6 +12,7 @@ export class DownloadLatestComponent {
 
     protected stableMilestone!: Milestone;
     protected betaMilestone!: Milestone;
+    protected canMilestone!:Milestone;
 
     constructor(private dataService: DataService) {
     }
@@ -24,6 +25,7 @@ export class DownloadLatestComponent {
 
              this.stableMilestone = <Milestone>elements.channels.get('Stable');
              this.betaMilestone = <Milestone>elements.channels.get('Beta');
+             this.canMilestone = <Milestone>elements.channels.get('Canary');
         });
     }
 }
