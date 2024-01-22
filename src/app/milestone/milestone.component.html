@@ -11,10 +11,10 @@
             <th mat-header-cell *matHeaderCellDef> Downloads</th>
             <td mat-cell *matCellDef="let download">
                 <span *ngFor="let platformDownload of download!.downloads">
-                    <a mat-stroked-button routerLink
+                    <a mat-stroked-button
+                       [href]="platformDownload.url"
                        matTooltip="{{platformDownload.url}}"
                        [matTooltipShowDelay]="200"
-                       href="{{platformDownload.url}}"
                        class="mr-1">
                         <fa-icon class="fa-xl icon-color" [icon]=" platformDownload.platform | getPlatformIcon"></fa-icon>
                         {{ platformDownload.platform }}
