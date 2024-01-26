@@ -41,7 +41,7 @@ jobs:
 
     - name: Publish link
       if: success()
-      - uses: mshick/add-pr-comment@v2
+      uses: mshick/add-pr-comment@v2
         with:
           message: |
-            (https://telekom-mms.github.io/chrome4testing-download/dev/)
+            [Check out dev release](https://telekom-mms.github.io/chrome4testing-download/dev/)
