@@ -27,7 +27,7 @@ export class AppComponent {
             options
         );
         // Adding all icon packs from Font awesome
-        // Update: Added all icons exeeds maximum bundle budget
+        // Update: Added all icons exceeds maximum bundle budget
         // this.faLibrary.addIconPacks(fas, far, fab);
         this.faLibrary.addIcons(faLinux, faApple, faMicrosoft)
     }
